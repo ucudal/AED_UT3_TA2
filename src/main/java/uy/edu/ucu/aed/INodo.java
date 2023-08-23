@@ -1,3 +1,5 @@
+package uy.edu.ucu.aed;
+
 public interface INodo<T> {
 
     

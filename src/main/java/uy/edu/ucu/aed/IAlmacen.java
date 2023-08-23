@@ -1,3 +1,4 @@
+package uy.edu.ucu.aed;
 
 public interface IAlmacen {
 
@@ -11,7 +12,7 @@ public interface IAlmacen {
 
     public String getNombre();
 
-    public Lista<Producto> getListaProductos();
+    public Lista<IProducto> getListaProductos();
     
     public long obtenerValorStock();
 
@@ -20,7 +21,7 @@ public interface IAlmacen {
      *
      * @param unProducto
      */
-    public void insertarProducto(Producto unProducto);
+    public void insertarProducto(IProducto unProducto);
 
     /**
      * Eliminar productos que ya no se venden (por no ser comercializados m�s).
@@ -72,7 +73,7 @@ public interface IAlmacen {
      * @param clave
      * @return
      */
-    public Producto buscarPorCodigo(Comparable codProducto);
+    public IProducto buscarPorCodigo(Comparable codProducto);
 
     /**
      * Listar todos los productos registrados, ordenados por nombre, presentando
@@ -87,7 +88,7 @@ public interface IAlmacen {
      * @param descripcion
      * @return
      */
-    public Producto buscarPorDescripcion(String descripcion);
+    public IProducto buscarPorDescripcion(String descripcion);
 
     /**
      * Retorna el tama�o del almacen: cantidad de productos. No es lo mismo que

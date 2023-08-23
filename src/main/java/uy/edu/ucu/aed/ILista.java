@@ -1,3 +1,4 @@
+package uy.edu.ucu.aed;
 
 public interface ILista<T> {
 
