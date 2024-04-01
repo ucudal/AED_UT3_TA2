@@ -9,13 +9,13 @@ public class Lista<T> implements ILista<T> {
     }
 
     @Override
-    public void insertar(Nodo<T> nodo) {
+    public void insertar(T dato, Comparable clave) {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'insertar'");
     }
 
     @Override
-    public Nodo<T> buscar(Comparable clave) {
+    public T buscar(Comparable clave) {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'buscar'");
     }

@@ -5,17 +5,18 @@ public interface ILista<T> {
     /**
      * Metodo encargado de agregar un nodo al final de la lista.
      *
-     * @param nodo - Nodo a agregar
+     * @param dato - Dato a agregar del nodo
+     * @param clave - Clave del nodo 
      */
-    public void insertar(Nodo<T> nodo);
+    public void insertar(T dato, Comparable clave);
 
     /**
      * Metodo encargado de buscar un nodo cuya clave es la indicada.
      *
      * @param clave - Clave del nodo a buscar.
-     * @return El nodo encontrado. En caso de no encontrarlo, retornar null.
+     * @return El dato del nodo encontrado. En caso de no encontrarlo, retornar null.
      */
-    public Nodo<T> buscar(Comparable clave);
+    public T buscar(Comparable clave);
 
     /**
      * Metodo encargado de eliminar un nodo cuya clave es la indicada.
