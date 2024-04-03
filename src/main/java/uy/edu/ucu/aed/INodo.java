@@ -1,60 +1,56 @@
 package uy.edu.ucu.aed;
 
+/**
+ * Interfaz que define la estructura de un nodo para una lista enlazada simple.
+ * Cada nodo contiene un dato de un tipo genérico y una referencia al siguiente nodo.
+ *
+ * @param <T> El tipo de dato que se almacenará en el nodo.
+ */
 public interface INodo<T> {
 
-    
     /**
-     * devuelve el dato del nodo
-     * @return 
+     * Obtiene el dato almacenado en el nodo.
+     *
+     * @return El dato del nodo.
      */
     public T getDato();
     
     /**
-     * devuelve el siguiente del nodo
-     * @return 
+     * Obtiene el siguiente nodo en la lista.
+     *
+     * @return El siguiente nodo.
      */
     public Nodo<T> getSiguiente();
     
-    
     /**
-     * "engancha" otro nodo a continuacion
-     * 
+     * Establece el siguiente nodo en la lista.
+     *
+     * @param nodo - El nodo que se establecerá como el siguiente.
      */
     public void setSiguiente(Nodo<T> nodo);
     
     /**
-     * Imprime los datos del nodo
+     * Imprime el dato almacenado en el nodo.
      */
-    
-    
-    
     public void imprimir();
 
     /**
-     * Imprime la etiqueta del nodo
+     * Imprime la etiqueta del nodo.
      */
-    
     public void imprimirEtiqueta();
 
-    
     /**
-     * Retorna la etiqueta del nodo
+     * Obtiene la etiqueta del nodo.
      *
-     * @return etiqueta del nodo
+     * @return La etiqueta del nodo.
      */
     public Comparable getEtiqueta();
-//	/**
-//	 *
-//	 * @param unNodo
-//	 * @return devueve -1 si this tiene una clave menor, 0 si son iguales, 1 si es mayor
-//	 */
-//	public int compareTo(INodo<E> unNodo);
 
     /**
+     * Compara la etiqueta de este nodo con otra etiqueta.
      *
-     * @param etiqueta
-     * @return devueve -1 si this tiene una etiqueta menor, 0 si son iguales, 1
-     * si es mayor
+     * @param etiqueta - La etiqueta con la que se comparará la etiqueta de este nodo.
+     * @return -1 si la etiqueta de este nodo es menor, 0 si son iguales, 1 si es mayor.
      */
     public int compareTo(Comparable etiqueta);
 }

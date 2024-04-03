@@ -3,60 +3,63 @@ package uy.edu.ucu.aed;
 public interface ILista<T> {
 
     /**
-     * Metodo encargado de agregar un nodo al final de la lista.
+     * Agrega un nuevo nodo al final de la lista.
      *
-     * @param dato - Dato a agregar del nodo
-     * @param clave - Clave del nodo 
+     * @param dato - El valor que se almacenará en el nuevo nodo.
+     * @param clave - La clave única que identificará al nuevo nodo.
      */
     public void insertar(T dato, Comparable clave);
 
     /**
-     * Metodo encargado de buscar un nodo cuya clave es la indicada.
+     * Busca un nodo en la lista utilizando su clave.
      *
-     * @param clave - Clave del nodo a buscar.
-     * @return El dato del nodo encontrado. En caso de no encontrarlo, retornar null.
+     * @param clave - La clave del nodo a buscar.
+     * @return El valor del nodo si se encuentra, null en caso contrario.
      */
     public T buscar(Comparable clave);
 
     /**
-     * Metodo encargado de eliminar un nodo cuya clave es la indicada.
+     * Elimina un nodo de la lista utilizando su clave.
      *
-     * @param clave Clave del nodo a eliminar.
-     * @return True en caso de que la eliminaci�n haya sido efectuada con �xito.
+     * @param clave - La clave del nodo a eliminar.
+     * @return True si el nodo fue eliminado con éxito, false en caso contrario.
      */
     public boolean eliminar(Comparable clave);
 
     /**
-     * Metodo encargado de imprimir en consola las claves de los nodos
-     * contenidos en la lista.
-     * @return 
+     * Genera una representación en cadena de las claves de los nodos en la lista.
+     *
+     * @return Una cadena que contiene las claves de todos los nodos en la lista.
      */
     public String imprimir();
 
     /**
-     * Retorna un String con las claves separadas por el separador pasado por
-     * par�metro.
+     * Genera una representación en cadena de las claves de los nodos en la lista, separadas por un separador específico.
      *
-     * @param separador Separa las claves
-     * @return
+     * @param separador - El caracter o cadena que se utilizará para separar las claves en la cadena resultante.
+     * @return Una cadena que contiene las claves de todos los nodos en la lista, separadas por el separador proporcionado.
      */
     public String imprimir(String separador);
 
     /**
-     * Retorna la cantidad de elementos de la lista. En caso de que la lista
-     * este vac�a, retornar 0.
+     * Obtiene la cantidad de nodos en la lista.
      *
-     * @return Cantidad de elementos de la lista.
+     * @return El número de nodos en la lista. Si la lista está vacía, retorna 0.
      */
     public int cantElementos();
 
     /**
-     * Indica si la lista contiene o no elementos.
+     * Determina si la lista está vacía o no.
      *
-     * @return Si tiene elementos o no.
+     * @return True si la lista no contiene nodos, false en caso contrario.
      */
     public boolean esVacia();
     
+    /**
+     * Establece el primer nodo de la lista.
+     *
+     * @param unNodo - El nodo que se establecerá como el primero en la lista.
+     */
     public void setPrimero( Nodo<T> unNodo);    
 
 }

@@ -8,15 +8,20 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 
+/**
+ * Clase que proporciona métodos estáticos para leer y escribir archivos de texto.
+ */
 public class ManejadorArchivosGenerico {
+
 	/**
-	 * @param nombreCompletoArchivo
-	 * @param listaLineasArchivo
-	 *            lista con las lineas del archivo
-	 * @throws IOException
+	 * Escribe un archivo de texto con las líneas proporcionadas.
+	 * Si el archivo ya existe, las nuevas líneas se añadirán al final.
+	 *
+	 * @param nombreCompletoArchivo El nombre y ruta del archivo a escribir.
+	 * @param listaLineasArchivo Un array de strings, cada uno de los cuales se escribirá como una línea en el archivo.
+	 * @throws IOException Si ocurre un error de entrada/salida al escribir en el archivo.
 	 */
-	public static void escribirArchivo(String nombreCompletoArchivo,
-			String[] listaLineasArchivo) {
+	public static void escribirArchivo(String nombreCompletoArchivo, String[] listaLineasArchivo) {
 		FileWriter fw;
 		try {
 			fw = new FileWriter(nombreCompletoArchivo, true);
@@ -29,12 +34,19 @@ public class ManejadorArchivosGenerico {
 			bw.close();
 			fw.close();
 		} catch (IOException e) {
-			System.out.println("Error al escribir el archivo "
-					+ nombreCompletoArchivo);
+			System.out.println("Error al escribir el archivo " + nombreCompletoArchivo);
 			e.printStackTrace();
 		}
 	}
 
+	/**
+	 * Lee un archivo de texto y devuelve su contenido como un array de strings.
+	 *
+	 * @param nombreCompletoArchivo El nombre y ruta del archivo a leer.
+	 * @return Un array de strings, cada uno de los cuales contiene una línea del archivo.
+	 * @throws FileNotFoundException Si el archivo no se encuentra en la ruta especificada.
+	 * @throws IOException Si ocurre un error de entrada/salida al leer el archivo.
+	 */
 	public static String[] leerArchivo(String nombreCompletoArchivo) {
 		FileReader fr;
 		ArrayList<String> listaLineasArchivo = new ArrayList<String>();
@@ -47,14 +59,12 @@ public class ManejadorArchivosGenerico {
 				lineaActual = br.readLine();
 			}
 			br.close();
-            fr.close();
+			fr.close();
 		} catch (FileNotFoundException e) {
-			System.out.println("Error al leer el archivo "
-					+ nombreCompletoArchivo);
+			System.out.println("Error al leer el archivo " + nombreCompletoArchivo);
 			e.printStackTrace();
 		} catch (IOException e) {
-			System.out.println("Error al leer el archivo "
-					+ nombreCompletoArchivo);
+			System.out.println("Error al leer el archivo " + nombreCompletoArchivo);
 			e.printStackTrace();
 		}
 		System.out.println("Archivo leido satisfactoriamente");
