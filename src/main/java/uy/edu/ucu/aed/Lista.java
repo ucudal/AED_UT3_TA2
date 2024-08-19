@@ -2,6 +2,18 @@ package uy.edu.ucu.aed;
 
 public class Lista<T> implements ILista<T> {
 
+    private class Nodo<T> {
+
+        private final Comparable etiqueta;
+        private T dato;
+        private Nodo<T> siguiente = null;
+    
+        public Nodo(Comparable etiqueta, T dato ) {
+            this.etiqueta = etiqueta;
+            this.dato = dato;
+        }
+    }
+
     private Nodo<T> primero;
 
     public Lista() {
@@ -48,12 +60,6 @@ public class Lista<T> implements ILista<T> {
     public boolean esVacia() {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'esVacia'");
-    }
-
-    @Override
-    public void setPrimero(Nodo<T> unNodo) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'setPrimero'");
     }
 
 

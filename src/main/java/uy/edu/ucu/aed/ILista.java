@@ -54,12 +54,4 @@ public interface ILista<T> {
      * @return True si la lista no contiene nodos, false en caso contrario.
      */
     public boolean esVacia();
-    
-    /**
-     * Establece el primer nodo de la lista.
-     *
-     * @param unNodo - El nodo que se establecerá como el primero en la lista.
-     */
-    public void setPrimero( Nodo<T> unNodo);    
-
 }
