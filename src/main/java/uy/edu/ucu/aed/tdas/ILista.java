@@ -1,4 +1,4 @@
-package uy.edu.ucu.aed;
+package uy.edu.ucu.aed.tdas;
 
 public interface ILista<T> {
 

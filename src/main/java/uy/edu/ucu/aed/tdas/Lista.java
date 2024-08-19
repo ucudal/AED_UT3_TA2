@@ -1,4 +1,4 @@
-package uy.edu.ucu.aed;
+package uy.edu.ucu.aed.tdas;
 
 public class Lista<T> implements ILista<T> {
 
@@ -60,8 +60,5 @@ public class Lista<T> implements ILista<T> {
     public boolean esVacia() {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'esVacia'");
-    } 
-
-
-    // implementar los metodos indicados en la interfaz
+    }
 }
